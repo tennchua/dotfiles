@@ -25,6 +25,9 @@
 	reb = "!r() { git rebase -i HEAD~$1; }; r"
 	# Undo a `git push`
 	undopush = push -f origin HEAD^:master
+	# svn muscle memory
+	ci = commit
+	co = checkout
 
 [apply]
 	# Detect whitespace errors when applying a patch
