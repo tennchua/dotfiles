@@ -1,2 +1,17 @@
 # Disable the startup message
 startup_message off
+
+# Add status line at bottom with names of screen windows
+hardstatus alwayslastline "%{-b gk}%-w%{+b kg}%50>%n %t%{-b gk}%+w%< %{= kG}%-=%c" 
+
+# no annoying audible bell, please
+vbell off
+
+# detach on hangup
+autodetach on
+
+# emulate .logout message
+pow_detach_msg "Screen session of \$LOGNAME \$:cr:\$:nl:ended."
+
+# set number of lines in scrollback buffer
+defscrollback 1000
