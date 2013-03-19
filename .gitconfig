@@ -80,4 +80,4 @@
 	insteadOf = "gist:"
 
 [push]
-	default = simple
+	default = current
