@@ -1,8 +1,13 @@
 #!/bin/bash
-cd "$(dirname "${BASH_SOURCE}")"
-git pull
+
 function doIt() {
-	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" --exclude "README.md" -av . ~
+	dir=~/dotfiles # dotfiles directory
+	for file in $(git ls-files | grep -v README.md | grep -v bootstrap.sh | cut -d"/" -f1|uniq); do
+		if [[ ( -f "$file" ) || ( -d "$file" ) ]]; then
+	    	echo "Creating symlink to $file in home directory."
+	    	ln -s $dir/$file ~/$file
+	    fi
+	done
 }
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
 	doIt
@@ -14,4 +19,4 @@ else
 	fi
 fi
 unset doIt
-source ~/.bash_profile
+# source ~/.zshrc
