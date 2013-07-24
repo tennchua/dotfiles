@@ -19,4 +19,4 @@ else
 	fi
 fi
 unset doIt
-# source ~/.zshrc
+# source ~/.zshrc # this throws errors, presumably because of the #!/bin/bash at the top of this file
