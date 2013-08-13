@@ -41,6 +41,10 @@
     dh1 = diff HEAD~1
 [core]
 	quotepath = false
+ excludesfile = /opt/boxen/config/git/gitignore
 [push]
 	default = current
 
+
+[credential]
+helper = /opt/boxen/bin/boxen-git-credential
