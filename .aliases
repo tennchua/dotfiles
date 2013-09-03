@@ -22,6 +22,7 @@ alias m="mate ."
 alias s="subl ."
 alias o="open"
 alias oo="open ."
+alias be="bundle exec"
 
 # Emulate "normal" Unixy behavior is OS X
 alias locate="mdfind -name"
