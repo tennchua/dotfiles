@@ -47,4 +47,32 @@ unsetopt correct_all
 # Customize to your needs...
 export PATH=~/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/usr/X11/bin
 
+# FLEX 4.1 for SNAP/TPHONE-FLEX
+export PATH=$PATH:/opt/boxen/homebrew/Cellar/flex_sdk-4.1/sdk/libexec/bin
+export FLEX_HOME=/opt/boxen/homebrew/Cellar/flex_sdk-4.1/sdk/libexec
+mkdir -p ~/.ant/lib
+if [ ! -e ~/.ant/lib/flexTasks.jar ]; then
+  ln -sf /opt/boxen/homebrew/Cellar/flex_sdk-4.1/sdk/libexec/ant/lib/flexTasks.jar ~/.ant/lib
+fi
+
+# FLEX 4.5 for SNAP/FLASH-UTILS
+# export PATH=$PATH:/usr/local/Cellar/flex_sdk-4.5/4.5.1.21328/libexec/bin
+# export FLEX_HOME=/usr/local/Cellar/flex_sdk-4.5/4.5.1.21328/libexec
+# mkdir -p ~/.ant/lib
+# if [ ! -e ~/.ant/lib/flexTasks.jar ]; then
+#   ln -s /usr/local/Cellar/flex_sdk-4.5/4.5.1.21328/libexec/ant/lib/flexTasks.jar ~/.ant/lib
+# fi
+
+# FLEX 4.6 for ????
+# export PATH=$PATH:/usr/local/Cellar/flex_sdk/4.6.0.23201/libexec/bin
+# export FLEX_HOME=/usr/local/Cellar/flex_sdk/4.6.0.23201/libexec
+# mkdir -p ~/.ant/lib
+# if [ ! -e ~/.ant/lib/flexTasks.jar ]; then
+#   ln -s /usr/local/Cellar/flex_sdk/4.6.0.23201/libexec/ant/lib/flexTasks.jar ~/.ant/lib
+# fi
+
+
+# From http://steveswinsburg.wordpress.com/2011/07/22/java_home-on-os-x-lion/
+# export JAVA_HOME=$(/usr/libexec/java_home)
+
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
