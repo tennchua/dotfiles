@@ -24,6 +24,12 @@ alias o="open"
 alias oo="open ."
 alias be="bundle exec"
 
+# Telmate folders
+alias snap="cd ~/src/telmate/apps/snap"
+alias snaprails="cd ~/src/telmate/apps/snap"
+alias mycell="cd ~/src/telmate/apps/snap/mycell"
+alias its="cd ~/src/telmate/apps/tygerweb"
+
 # Emulate "normal" Unixy behavior is OS X
 alias locate="mdfind -name"
 
